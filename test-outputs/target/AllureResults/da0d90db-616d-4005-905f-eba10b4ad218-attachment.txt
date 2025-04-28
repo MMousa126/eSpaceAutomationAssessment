@@ -1,0 +1,7 @@
+[INFO] 19-03-2025 13:00:16 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Wed Mar 19 13:00:15 EET 2025
+[INFO] 19-03-2025 13:00:19 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 19-03-2025 13:00:22 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 19-03-2025 13:00:22 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 19-03-2025 13:00:22 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingInstitutionLevel3 has Started
+[INFO] 19-03-2025 13:00:22 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Wed Mar 19 13:00:15 EET 2025
+[INFO] 19-03-2025 13:00:30 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingInstitutionLevel3 failed

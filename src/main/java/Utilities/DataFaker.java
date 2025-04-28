@@ -2,7 +2,7 @@ package Utilities;
 
 import com.github.javafaker.Faker;
 
-import java.util.Locale;
+import java.util.*;
 
 public class DataFaker {
 
@@ -307,4 +307,25 @@ public class DataFaker {
     public static String fakerZelda() {
         return faker.zelda().character();
     }
+
+    public static String generateRandomListOfNumbers(int lowerGenNum, int higherGenNum, int numOfGen) {
+        Random random = new Random();
+        ArrayList<Integer> arrayList = new ArrayList<>(numOfGen);
+
+        while (arrayList.size() < numOfGen) {
+            int x = random.nextInt((higherGenNum - lowerGenNum)) + lowerGenNum;
+            arrayList.add(x);
+        }
+
+        StringBuffer stringBuffer = new StringBuffer();
+
+        for (int num : arrayList){
+            stringBuffer.append(num);
+        }
+        return stringBuffer.toString();
+    }
+
+
+
+    
 }

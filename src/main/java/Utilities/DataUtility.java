@@ -10,7 +10,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.JSONException;
+import org.json.JSONTokener;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.nio.file.Paths;
@@ -207,19 +211,75 @@ public class DataUtility {
 
     }
 
-    public static void WriteDataIntoJsonFile(String filename,String key,String value){
+    public static void writeDataIntoJsonFile(String filename, String key, String value) {
+        File file = new File(TestData_Path + filename + ".json");
+        JSONObject obj;
 
-        JSONObject obj = new JSONObject();
-        obj.put(key,value);
+        // Check if file exists
+        if (file.exists()) {
+            try (FileReader reader = new FileReader(file)) {
+                JSONParser parser = new JSONParser();
+                obj = (JSONObject) parser.parse(reader);
+            } catch (IOException | ParseException e) {
+                obj = new JSONObject();
+            }
+        } else {
+            // Create new JSON object if file doesn't exist
+            obj = new JSONObject();
+        }
 
-        try {
-            FileWriter file = new FileWriter(TestData_Path + filename + ".json");
-            file.write(obj.toString());
-            file.close();
+        // Update JSON with the new key-value pair
+        obj.put(key, value);
+
+        // Write updated JSON back to the file
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(obj.toJSONString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    public static void writeDataIntoJsonFileCheckFileExists(String filename, String key, String value) {
+        File file = new File(TestData_Path + filename + ".json");
+
+        // ✅ Check if the file exists (by name only)
+        if (!file.exists()) {
+            System.out.println("File does not exist. Creating new file and writing data...");
+            createJsonFile(file, key, value);
+        } else {
+            System.out.println("File exists. Writing new data...");
+            appendToJsonFile(file, key, value);
+        }
+    }
+
+    // ✅ Create a new file and write the first key-value pair
+    private static void createJsonFile(File file, String key, String value) {
+        JSONObject obj = new JSONObject();
+        obj.put(key, value);
+
+        try (FileWriter writer = new FileWriter(file)) { // No append mode (overwrite)
+            writer.write(obj.toJSONString());
+            writer.flush();
+            System.out.println("New JSON file created and data added.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // ✅ Append new key-value pair if the file already exists
+    private static void appendToJsonFile(File file, String key, String value) {
+        JSONObject obj = new JSONObject();
+        obj.put(key, value);
+
+        try (FileWriter writer = new FileWriter(file, true)) { // Append mode
+            writer.write("\n" + obj.toJSONString()); // New line to separate objects
+            writer.flush();
+            System.out.println("New data added to existing file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 //    public static String getProjectRoot() {
 //        return Paths.get(".").toAbsolutePath().normalize().toString();
 //    }

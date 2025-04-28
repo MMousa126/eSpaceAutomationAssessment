@@ -1,0 +1,10 @@
+[INFO] 18-03-2025 16:10:50 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Tue Mar 18 16:10:49 EET 2025
+[INFO] 18-03-2025 16:10:53 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 18-03-2025 16:10:58 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 18-03-2025 16:10:58 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 18-03-2025 16:10:58 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingInstitutionInboxRedirect has Started
+[INFO] 18-03-2025 16:10:58 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Tue Mar 18 16:10:49 EET 2025
+[INFO] 18-03-2025 16:11:09 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingInstitutionInboxRedirect passed
+[INFO] 18-03-2025 16:11:09 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case addingInstitutionInboxRedirect has Passed Successfully
+[INFO] 18-03-2025 16:11:09 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Tue Mar 18 16:10:49 EET 2025
+[INFO] 18-03-2025 16:11:09 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case quit passed

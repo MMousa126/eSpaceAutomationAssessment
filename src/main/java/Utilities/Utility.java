@@ -402,12 +402,27 @@ public class Utility {
         }
     }
 
-    public static void SelectingFromDropDown(WebDriver driver, By locator, String option) {
+    public static void SelectingFromDropDownByText(WebDriver driver, By locator, String option) {
 
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         new Select(ByToWebElement(driver, locator)).selectByVisibleText(option);
+    }
+    public static void SelectingFromDropDownByTextWWait(WebDriver driver, By locator, String option) {
+
+        new Select(ByToWebElement(driver, locator)).selectByVisibleText(option);
+    }
+
+    public static void SelectingFromDropDownByIndex(WebDriver driver, By locator, int Index) {
+
+        new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfAllElements(ByToWebElement(driver,locator)));
+
+        new Select(ByToWebElement(driver, locator)).selectByIndex(Index);
+    }
+    public static boolean isElementPresent(WebDriver driver, By locator) {
+        return !driver.findElements(locator).isEmpty();
     }
 
     public static void clearField(WebDriver driver, By locator){
@@ -525,6 +540,9 @@ public class Utility {
         return driver.getCurrentUrl().equals(expectedURL);
     }
 
+    public static String getCurrentURL (WebDriver driver){
+        return driver.getCurrentUrl();
+    }
     // for regression test for storing only one latest file from logs
     public static File GetLatestFile(String folderpath) {
         File folder = new File(folderpath);

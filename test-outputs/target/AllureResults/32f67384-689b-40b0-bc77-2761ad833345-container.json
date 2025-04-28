@@ -1,0 +1,1 @@
+{"uuid":"32f67384-689b-40b0-bc77-2761ad833345","name":"PageTesting.T05AddingCompany","children":["cd2cfc9a-62d4-4430-9c2c-b927641a1609"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1745830053616,"stop":1745830065234}],"afters":[],"start":1745830053587,"stop":1745830072156}

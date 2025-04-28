@@ -4,9 +4,7 @@ import org.testng.asserts.SoftAssert;
 
 public class AssertUtility {
 
-    private final SoftAssert softAssert;
-
-
+    private static SoftAssert softAssert;
 
 
     public AssertUtility(SoftAssert softAssert) {

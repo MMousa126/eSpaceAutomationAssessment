@@ -1,0 +1,10 @@
+[INFO] 19-03-2025 12:36:58 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Wed Mar 19 12:36:57 EET 2025
+[INFO] 19-03-2025 12:37:01 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 19-03-2025 12:37:06 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 19-03-2025 12:37:06 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 19-03-2025 12:37:06 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingInstitution1 has Started
+[INFO] 19-03-2025 12:37:07 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Wed Mar 19 12:36:57 EET 2025
+[INFO] 19-03-2025 12:37:23 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingInstitution1 passed
+[INFO] 19-03-2025 12:37:23 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case addingInstitution1 has Passed Successfully
+[INFO] 19-03-2025 12:37:23 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Wed Mar 19 12:36:57 EET 2025
+[INFO] 19-03-2025 12:37:23 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case quit passed
