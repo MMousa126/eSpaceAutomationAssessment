@@ -10,6 +10,7 @@ public class P02LandingPage {
 
     private final By logout = By.cssSelector("[alt = logout]");
     private final By systemSetBtn = By.xpath("(//img[@alt = 'buliding'])[11]");
+    private final By incomingBtn = By.xpath("(//img[@alt = 'buliding'])[1]");
 
 
     public P02LandingPage(WebDriver driver) {
@@ -27,5 +28,10 @@ public class P02LandingPage {
 
         Utility.Clicking_OnElement(driver,systemSetBtn);
         return new P03SystemSettings(driver);
+    }
+
+    public P11IncomingInbox clickOnIncomingInbox(){
+        Utility.Clicking_OnElement(driver,incomingBtn);
+        return new P11IncomingInbox(driver);
     }
 }

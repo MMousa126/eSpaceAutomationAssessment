@@ -3,10 +3,8 @@ package PagesTesting;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.tracing.opentelemetry.SeleniumSpanExporter;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class P06Individual {
@@ -140,7 +138,7 @@ public class P06Individual {
         return this;
     }
 
-    public P00MyInbox clickOnMyInbox(){
+    public P10MyInbox clickOnMyInbox(){
 
         Utility.Clicking_OnElement(driver,myInboxBtn);
         try {
@@ -148,7 +146,7 @@ public class P06Individual {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return new P00MyInbox(driver);
+        return new P10MyInbox(driver);
     }
 
     public String getCurrentURL(){

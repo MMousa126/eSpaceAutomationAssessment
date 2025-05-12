@@ -2,14 +2,9 @@ package PagesTesting;
 
 import Utilities.Utility;
 import Utilities.LogsUtility;
-import jdk.jshell.execution.Util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.swing.text.Utilities;
 import java.time.Duration;
 
 public class P04institution {
@@ -128,7 +123,7 @@ public class P04institution {
         return new P03SystemSettings(driver);
     }
 
-    public P00MyInbox clickOnMyInbox(){
+    public P10MyInbox clickOnMyInbox(){
 
         Utility.Clicking_OnElement(driver,myInboxBtn);
         try {
@@ -136,7 +131,7 @@ public class P04institution {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return new P00MyInbox(driver);
+        return new P10MyInbox(driver);
     }
 
     public boolean btnExists(){
