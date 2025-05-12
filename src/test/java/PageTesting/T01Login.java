@@ -1,4 +1,4 @@
-package PageTesting;
+package Testing;
 
 import Assertion.AssertUtility;
 import Factory.DriverFactory;

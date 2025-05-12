@@ -1,4 +1,4 @@
-package PageTesting;
+package Testing;
 
 import Factory.DriverFactory;
 import Utilities.DataUtility;
