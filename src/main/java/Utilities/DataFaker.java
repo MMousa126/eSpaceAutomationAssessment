@@ -8,7 +8,7 @@ public class DataFaker {
 
     private static final Faker faker = new Faker();
 
-    public String fakerUsername(){
+    public static String fakerUsername(){
         return faker.name().username();
     }
     public static String fakerAddress() {
@@ -208,7 +208,7 @@ public class DataFaker {
     }
 
     public static String fakerName() {
-        return faker.name().fullName();
+        return faker.name().firstName();
     }
 
     public static String fakerNation() {
@@ -308,6 +308,11 @@ public class DataFaker {
         return faker.zelda().character();
     }
 
+    public static int generateRandomNumber(int lowerGenNum, int higherGenNum){
+        Random random = new Random();
+        return random.nextInt((higherGenNum - lowerGenNum)) + lowerGenNum;
+
+    }
     public static String generateRandomListOfNumbers(int lowerGenNum, int higherGenNum, int numOfGen) {
         Random random = new Random();
         ArrayList<Integer> arrayList = new ArrayList<>(numOfGen);

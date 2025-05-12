@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import java.time.Duration;
 
 public class P05Company {
-
     private final WebDriver driver;
     private final By companyNameId = By.id("nonGovernmentalAgencyName");
     private final By commercialNoId = By.id("commercialRegistrationNumber");

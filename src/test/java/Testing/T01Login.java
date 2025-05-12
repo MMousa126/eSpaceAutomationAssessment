@@ -1,20 +1,24 @@
-package PageTesting;
+package Testing;
 
 import Assertion.AssertUtility;
 import Factory.DriverFactory;
 import PagesTesting.P01Login;
-import Utilities.DataFaker;
 import Utilities.DataUtility;
 import Utilities.LogsUtility;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import static Factory.DriverFactory.GetThreadDriver;
 import static Factory.DriverFactory.SetupThreadDriver;
 
-public class T05AddingCompany {
+import Listeners.IInvokedMethodListeners;
+import Listeners.ITestResultListeners;
+@Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
+
+public class T01Login {
 
     private final String browser = "Browser";
     private final String browser_filename = "environment";
@@ -24,7 +28,6 @@ public class T05AddingCompany {
     private final String nazahaPortal = DataUtility.GetPropertiesDataFromFile(browser_filename,portal);
     private final String landingPage = DataUtility.GetPropertiesDataFromFile(browser_filename,landing);
 
-    SoftAssert softAssert = new SoftAssert();
     @BeforeClass
     void setUp(){
 
@@ -42,34 +45,26 @@ public class T05AddingCompany {
         }
     }
 
-    @Test(priority = 1)
-    void addingCompany(){
+    @Test
+    void login(){
 
-        String companyName = "Automated Level 1" + " "+ DataFaker.fakerApp()
-                +DataFaker.generateRandomListOfNumbers(10,20,1);
-        String comRegNo = DataFaker.generateRandomListOfNumbers(0,10,10);
-        String inboxurl = DataUtility.GetPropertiesDataFromFile(browser_filename,"inboxURL") ;
-        String url = new P01Login(GetThreadDriver())
+        new P01Login(DriverFactory.GetThreadDriver())
                 .enterUsername("MohamedTest")
                 .enterPassword("Moh@Test2025")
-                .clickOnLogin()
-                .sysSettings()
-                .clickOnCompany()
-                .clickOnAddingCompany()
-                .enterCompanyData(companyName,comRegNo)
-                .availableIncoming("نعم")
-                .clickOnSave()
-                .clickOnMyInbox()
-                .getCurrentURL();
+                .clickOnLogin();
 
-        new AssertUtility(softAssert)
-                .assertEqual(url,inboxurl);
+        new AssertUtility(new SoftAssert())
+                .assertEqual(GetThreadDriver().getCurrentUrl(),landingPage)
+                .assertAll();
+
+
 
     }
 
-    @AfterMethod
+    @AfterClass
     void quit()
     {
         DriverFactory.QuitThreadDriver();
     }
+
 }

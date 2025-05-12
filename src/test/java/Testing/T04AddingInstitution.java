@@ -1,4 +1,4 @@
-package PageTesting;
+package Testing;
 
 import Assertion.AssertUtility;
 import PagesTesting.P01Login;
@@ -121,6 +121,7 @@ public class T04AddingInstitution {
 
         String entityName = "Automated Level 1" + " "+ DataFaker.fakerApp();
         String entityCode = DataFaker.generateRandomListOfNumbers(0,10,5);
+        String govNameKey = "GovernmentalName" + DataFaker.generateRandomNumber(1,30);
         new P01Login(GetThreadDriver())
                 .enterUsername("MohamedTest")
                 .enterPassword("Moh@Test2025")
@@ -137,8 +138,12 @@ public class T04AddingInstitution {
                 .clickOnSave()
                 .clickOnMyInbox();
 
-        DataUtility.writeDataIntoJsonFile("EntityData","Entity_Name",entityName);
-        DataUtility.writeDataIntoJsonFile("EntityData","Entity_Code",entityCode);
+        DataUtility.appendToJsonFileString("EntityData",govNameKey,entityName);
+        DataUtility.appendToJsonFileString("EntityData","Entity_Code" +
+                DataFaker.generateRandomNumber(1,50),entityCode);
+
+        DataUtility.appendToJsonFileString("GovernmentalNames",govNameKey,entityName);
+
 
         new AssertUtility(new SoftAssert())
                 .assertTrue(new P04institution(GetThreadDriver()).btnExists());

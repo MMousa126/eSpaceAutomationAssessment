@@ -1,24 +1,20 @@
-package PageTesting;
+package Testing;
 
 import Assertion.AssertUtility;
 import Factory.DriverFactory;
 import PagesTesting.P01Login;
+import Utilities.DataFaker;
 import Utilities.DataUtility;
 import Utilities.LogsUtility;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import static Factory.DriverFactory.GetThreadDriver;
 import static Factory.DriverFactory.SetupThreadDriver;
 
-import Listeners.IInvokedMethodListeners;
-import Listeners.ITestResultListeners;
-@Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
-
-public class T01Login {
+public class T05AddingCompany {
 
     private final String browser = "Browser";
     private final String browser_filename = "environment";
@@ -27,7 +23,10 @@ public class T01Login {
     private final String Browser = DataUtility.GetPropertiesDataFromFile(browser_filename,browser);
     private final String nazahaPortal = DataUtility.GetPropertiesDataFromFile(browser_filename,portal);
     private final String landingPage = DataUtility.GetPropertiesDataFromFile(browser_filename,landing);
+    private final String inboxurl = DataUtility.GetPropertiesDataFromFile(browser_filename,"inboxURL") ;
 
+
+    SoftAssert softAssert = new SoftAssert();
     @BeforeClass
     void setUp(){
 
@@ -45,26 +44,35 @@ public class T01Login {
         }
     }
 
-    @Test
-    void login(){
+    @Test(priority = 1)
+    void addingCompany(){
 
-        new P01Login(DriverFactory.GetThreadDriver())
+        String companyName = "Automated Level 1" + " "+ DataFaker.fakerApp()
+                +DataFaker.generateRandomListOfNumbers(10,20,1);
+        String CompanyNameKey = "CompanyName" + DataFaker.generateRandomNumber(1,50);
+        String comRegNo = DataFaker.generateRandomListOfNumbers(0,10,10);
+        String url = new P01Login(GetThreadDriver())
                 .enterUsername("MohamedTest")
                 .enterPassword("Moh@Test2025")
-                .clickOnLogin();
+                .clickOnLogin()
+                .sysSettings()
+                .clickOnCompany()
+                .clickOnAddingCompany()
+                .enterCompanyData(companyName,comRegNo)
+                .availableIncoming("نعم")
+                .clickOnSave()
+                .clickOnMyInbox()
+                .getCurrentURL();
 
-        new AssertUtility(new SoftAssert())
-                .assertEqual(GetThreadDriver().getCurrentUrl(),landingPage)
-                .assertAll();
-
-
+        DataUtility.appendToJsonFileString("CompanyNames",CompanyNameKey,companyName);
+        new AssertUtility(softAssert)
+                .assertEqual(url,inboxurl);
 
     }
 
-    @AfterClass
+    @AfterMethod
     void quit()
     {
         DriverFactory.QuitThreadDriver();
     }
-
 }
