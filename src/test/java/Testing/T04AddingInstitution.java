@@ -4,6 +4,8 @@ import Assertion.AssertUtility;
 import PagesTesting.P01Login;
 import PagesTesting.P04institution;
 import Utilities.DataFaker;
+import Listeners.ITestResultListeners;
+import Listeners.IInvokedMethodListeners;
 import Utilities.DataUtility;
 import Utilities.LogsUtility;
 import org.testng.annotations.*;
@@ -11,7 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 import static Factory.DriverFactory.*;
 
-//@Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
+@Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
 
 
 public class T04AddingInstitution {
@@ -23,7 +25,7 @@ public class T04AddingInstitution {
     private final String nazahaPortal = DataUtility.GetPropertiesDataFromFile(browser_filename,portal);
     private final String landingPage = DataUtility.GetPropertiesDataFromFile(browser_filename,landing);
 
-    @BeforeClass
+    @BeforeMethod
     void setUp(){
 
         try {

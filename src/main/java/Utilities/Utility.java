@@ -15,8 +15,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.comparison.ImageDiff;
-import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
@@ -33,6 +31,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.chrono.HijrahDate;
 import java.util.*;
 import java.util.List;
 // this class concerns with any additional function that can helps me (General)
@@ -117,6 +117,12 @@ public class Utility {
 
         driver.findElement(locator).sendKeys(DataToBeSend);
     }
+
+    public static void SendDataWithoutWait(WebDriver driver, By locator, String DataToBeSend) {
+
+        driver.findElement(locator).sendKeys(DataToBeSend);
+    }
+
 
     public static void uploadingFileUsingSendKey(WebDriver driver, By locator, String path){
         driver.findElement(locator).sendKeys(path);
@@ -638,6 +644,16 @@ public class Utility {
         // Return an empty array if no matching files are found
         return new String[0];
     }
+
+
+    public static String TodayGeorgianDate(){
+        return LocalDate.now().toString() ;
+    }
+
+    public static String TodayHijriDate(){
+        return HijrahDate.now().toString().replace("Hijrah-umalqura AH ","") ;
+    }
+
     /* Like injecting Registration for the preconditions */
     public static String InjectRequestUsingPostAPI(String postrequest_url, String contantrequesttype, String bodytobeposted) {
 

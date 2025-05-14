@@ -8,8 +8,8 @@ public class P11IncomingInbox {
 
 
     private final WebDriver driver;
-    private final By dep1 = By.xpath("(//a[@class = 'ng-star-inserted'])[2]");
-    private final By dep2 = By.xpath("(//a[@class = 'ng-star-inserted'])[3]");
+    private final By dep1 = By.xpath("(//a[@routerlinkactive = 'active'])[2]");
+    private final By dep2 = By.xpath("(//a[@routerlinkactive = 'active'])[3]");
     private final By regTrans = By.id("dropdownCreateTransaction");
     private final By incomingTrans = By.xpath("(//button[@class = 'dropdown-item'])[2]");
     private final By internalIncomingTrans = By.xpath("(//button[@class = 'dropdown-item'])[3]");
@@ -36,10 +36,15 @@ public class P11IncomingInbox {
         return this;
     }
 
+
     public P12IncomingTransaction clickOnRegIncomingTrans(){
         Utility.Clicking_OnElement(driver,incomingTrans);
         return new P12IncomingTransaction(driver);
     }
 
+    public P12IncomingTransaction clickOnRegInternalIncomingTrans(){
+        Utility.Clicking_OnElement(driver,internalIncomingTrans);
+        return new P12IncomingTransaction(driver);
+    }
 
 }
