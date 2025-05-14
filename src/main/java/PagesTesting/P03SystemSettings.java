@@ -56,6 +56,17 @@ public class P03SystemSettings {
         return new P05Company(driver);
     }
 
+    public P06Individual clickOnAddingIndividual(){
+
+        Utility.Clicking_OnElementWithVisibility(driver,addInst);
+        try {
+            Thread.sleep(Duration.ofSeconds(2));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return new P06Individual(driver);
+    }
+
 
 
 }

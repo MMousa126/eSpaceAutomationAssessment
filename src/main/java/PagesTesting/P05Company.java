@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import java.time.Duration;
 
 public class P05Company {
-
     private final WebDriver driver;
     private final By companyNameId = By.id("nonGovernmentalAgencyName");
     private final By commercialNoId = By.id("commercialRegistrationNumber");
@@ -50,7 +49,7 @@ public class P05Company {
         return this;
     }
 
-    public P00MyInbox clickOnMyInbox(){
+    public P10MyInbox clickOnMyInbox(){
 
         Utility.Clicking_OnElement(driver,myInboxBtn);
         try {
@@ -58,7 +57,7 @@ public class P05Company {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return new P00MyInbox(driver);
+        return new P10MyInbox(driver);
     }
 
     public String getCurrentURL(){

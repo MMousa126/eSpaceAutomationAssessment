@@ -1,7 +1,6 @@
 package Utilities;
 
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -10,15 +9,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.json.JSONException;
-import org.json.JSONTokener;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
-import java.nio.file.Paths;
-import java.security.PublicKey;
 import java.util.Properties;
 
 // this class concerns with the Data like handling data from external files
@@ -266,19 +261,62 @@ public class DataUtility {
         }
     }
 
-    // ✅ Append new key-value pair if the file already exists
-    private static void appendToJsonFile(File file, String key, String value) {
-        JSONObject obj = new JSONObject();
+    public static void appendToJsonFileString(String filename, String key, String value) {
+        File file = new File(TestData_Path + filename + ".json");
+        JSONParser parser = new JSONParser();
+        JSONObject obj;
+
+        // Check if file exists and is non-empty
+        if (file.exists() && file.length() > 0) {
+            try (FileReader reader = new FileReader(file)) {
+                obj = (JSONObject) parser.parse(reader);
+            } catch (IOException | ParseException e) {
+                // File exists but content is invalid, start fresh
+                System.out.println("Existing file is empty or invalid JSON. Starting with new object.");
+                obj = new JSONObject();
+            }
+        } else {
+            // File doesn't exist or is empty
+            System.out.println("File is empty or doesn't exist. Starting with new object.");
+            obj = new JSONObject();
+        }
+
+        // Add or update key-value
         obj.put(key, value);
 
-        try (FileWriter writer = new FileWriter(file, true)) { // Append mode
-            writer.write("\n" + obj.toJSONString()); // New line to separate objects
+        // Write updated content back to file
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(obj.toJSONString());
             writer.flush();
-            System.out.println("New data added to existing file.");
+            System.out.println("Data written successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
+    private static void appendToJsonFile(File file, String key, String value) {
+        JSONParser parser = new JSONParser();
+        JSONObject obj;
+
+        try (FileReader reader = new FileReader(file)) {
+            obj = (JSONObject) parser.parse(reader); // Read existing content
+
+            // Add new key-value
+            obj.put(key, value);
+
+            // Overwrite file with updated JSON
+            try (FileWriter writer = new FileWriter(file)) {
+                writer.write(obj.toJSONString());
+                writer.flush();
+                System.out.println("Data appended successfully.");
+            }
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 //    public static String getProjectRoot() {
 //        return Paths.get(".").toAbsolutePath().normalize().toString();

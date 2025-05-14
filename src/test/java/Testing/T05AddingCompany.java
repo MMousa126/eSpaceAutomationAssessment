@@ -23,6 +23,8 @@ public class T05AddingCompany {
     private final String Browser = DataUtility.GetPropertiesDataFromFile(browser_filename,browser);
     private final String nazahaPortal = DataUtility.GetPropertiesDataFromFile(browser_filename,portal);
     private final String landingPage = DataUtility.GetPropertiesDataFromFile(browser_filename,landing);
+    private final String inboxurl = DataUtility.GetPropertiesDataFromFile(browser_filename,"inboxURL") ;
+
 
     SoftAssert softAssert = new SoftAssert();
     @BeforeClass
@@ -47,8 +49,8 @@ public class T05AddingCompany {
 
         String companyName = "Automated Level 1" + " "+ DataFaker.fakerApp()
                 +DataFaker.generateRandomListOfNumbers(10,20,1);
+        String CompanyNameKey = "CompanyName" + DataFaker.generateRandomNumber(1,50);
         String comRegNo = DataFaker.generateRandomListOfNumbers(0,10,10);
-        String inboxurl = DataUtility.GetPropertiesDataFromFile(browser_filename,"inboxURL") ;
         String url = new P01Login(GetThreadDriver())
                 .enterUsername("MohamedTest")
                 .enterPassword("Moh@Test2025")
@@ -62,6 +64,7 @@ public class T05AddingCompany {
                 .clickOnMyInbox()
                 .getCurrentURL();
 
+        DataUtility.appendToJsonFileString("CompanyNames",CompanyNameKey,companyName);
         new AssertUtility(softAssert)
                 .assertEqual(url,inboxurl);
 
