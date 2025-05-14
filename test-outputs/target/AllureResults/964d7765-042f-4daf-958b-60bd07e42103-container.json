@@ -1,0 +1,1 @@
+{"uuid":"964d7765-042f-4daf-958b-60bd07e42103","name":"Testing.T06AddingIndividual.quit","children":["fcdff507-1766-4a52-809a-716fdeb146ef"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746971082738,"stop":1746971082738}],"start":1746971082736,"stop":1746971082738}

@@ -1,0 +1,1 @@
+{"uuid":"3f0dd1f4-381a-43a2-acb7-4e63f72c8ecd","name":"Testing.T20BasicData.setUp","children":["c07cac68-fd53-432a-aaa3-8449caae5d1a"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747136847248,"stop":1747136851278}],"afters":[],"start":1747136847248,"stop":1747136851279}

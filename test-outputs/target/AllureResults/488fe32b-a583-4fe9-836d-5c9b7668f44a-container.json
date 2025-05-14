@@ -1,0 +1,1 @@
+{"uuid":"488fe32b-a583-4fe9-836d-5c9b7668f44a","name":"Testing.T20BasicData.Quit","children":["52a618dc-0f02-4fd9-8747-bed19d723d90"],"description":"","befores":[],"afters":[{"name":"Quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747214799226,"stop":1747214799431}],"start":1747214799226,"stop":1747214799432}

@@ -1,0 +1,1 @@
+{"uuid":"f4c753f3-3be3-4f34-8952-708d393563b7","name":"Testing.T06AddingIndividual","children":["5a34e043-9714-4a69-9452-792531a4a56a"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746968667602,"stop":1746968671818}],"afters":[],"start":1746968667575,"stop":1746968679606}
