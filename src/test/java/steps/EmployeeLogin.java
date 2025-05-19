@@ -1,4 +1,4 @@
-package steps;
+package Mandatory;
 
 import Assertion.AssertUtility;
 import Factory.DriverFactory;
