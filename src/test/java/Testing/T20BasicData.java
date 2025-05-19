@@ -27,6 +27,9 @@ public class T20BasicData {
 
 
     SoftAssert softAssert = new SoftAssert();
+
+
+
     @BeforeMethod
     void setUp(){
         try {

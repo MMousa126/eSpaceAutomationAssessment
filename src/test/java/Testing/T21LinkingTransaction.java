@@ -1,7 +1,9 @@
 package Testing;
 
+import PagesTesting.P01Login;
 import PagesTesting.P12IncomingTransaction;
 import PagesTesting.P21LinkTransaction;
+import Utilities.DataFaker;
 import Utilities.DataUtility;
 import Utilities.LogsUtility;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +27,39 @@ public class T21LinkingTransaction {
 
 
     SoftAssert softAssert = new SoftAssert();
+
+    public String baseSetUp(){
+        String outgoingNo =
+                DataFaker.generateRandomListOfNumbers(1,96,8);
+        String noOfTheTransaction =   new P01Login(GetThreadDriver())
+                .enterUsername("MohamedTest")
+                .enterPassword("Moh@Test2025")
+                .clickOnLogin()
+                .clickOnIncomingInbox()
+                .selectDep1()
+                .openDDLRegisterIncomingTrans()
+                .clickOnRegIncomingTrans()
+                .clickOnBasicData()
+                .selectTransactionType("اصل")
+                .selectYesForRoyal("yes")
+                .selectConfidentialLevel("عام")
+                .selectImportantLevel(1)
+                .selectUrgentLevel("عادي")
+                .enterTransactionTopic("New Automated Test ")
+                .selectEntity()
+                .selectMainEntity("Mohamed Mousa Entity")
+                .selectSecondaryEntity("Mohamed Mousa Entity")
+                .enterNoOfAttachments(7)
+                .enterOutgoingNo(outgoingNo)
+                .selectEnterDate("Hijri")
+                .enterEntityTopic("Automated")
+                .clickOnSave()
+                .getTransactionCode("Arabic")
+                ;
+
+
+        return noOfTheTransaction;
+    }
     @BeforeMethod
     void setUp(){
         try {
@@ -40,8 +75,10 @@ public class T21LinkingTransaction {
     @Test(priority = 1)
     void linkTransaction(){
 
-        new T20BasicData()
-                .BasicData();
+        String noOfTheTransaction = baseSetUp();
+        String transKey = "TransactionNo"+ DataUtility.getAndIncrementCounter("TransactionCounter");
+
+        DataUtility.appendToJsonFileString("TransNumbers",transKey,noOfTheTransaction);
 
         new P12IncomingTransaction(GetThreadDriver())
                 .clickOnContinueRegistering()

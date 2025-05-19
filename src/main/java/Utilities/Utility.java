@@ -49,6 +49,14 @@ public class Utility {
 
         driver.findElement(locator).click();
     }
+
+    public static void Clicking_OnElementVisibility(WebDriver driver, By locator) {
+
+        new WebDriverWait(driver, Duration.ofSeconds(120))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        driver.findElement(locator).click();
+    }
     public static void Clicking_OnElementWithoutAnyWait(WebDriver driver, By locator) {
         driver.findElement(locator).click();
     }
@@ -722,4 +730,31 @@ public class Utility {
 //            e.printStackTrace();
 //        }
 //    }
+
+    public static void typeString(Robot robot, String text) {
+        for (char c : text.toCharArray()) {
+            typeCharacter(robot, c);
+            robot.delay(100);
+        }
+    }
+
+    public static void typeCharacter(Robot robot, char character) {
+        try {
+            boolean upperCase = Character.isUpperCase(character);
+            int keyCode = KeyEvent.getExtendedKeyCodeForChar(character);
+
+            if (keyCode == KeyEvent.VK_UNDEFINED) {
+                throw new IllegalArgumentException("Cannot type character: " + character);
+            }
+
+            if (upperCase) robot.keyPress(KeyEvent.VK_SHIFT);
+
+            robot.keyPress(keyCode);
+            robot.keyRelease(keyCode);
+
+            if (upperCase) robot.keyRelease(KeyEvent.VK_SHIFT);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

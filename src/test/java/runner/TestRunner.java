@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests
  */
 @CucumberOptions(features = "src/test/java/features"
-        ,glue = {"steps"}
+        ,glue = {"Mandatory"}
         ,plugin = {"pretty"
         ,"html:test-outputs/target/AllureResults/html-report", // HTML report in the desired path
         "json:test-outputs/target/AllureResults/allure-results/cucumber.json"})

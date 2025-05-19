@@ -62,8 +62,8 @@ public class P200BasicDataEntity {
         Utility.SendData(driver,searchSEntity,Sentity);
 
         try{
-            Thread.sleep(2500);
-            Utility.Clicking_OnElement(driver,searchableSEntity);
+            Thread.sleep(2000);
+            Utility.Clicking_OnElementVisibility(driver,searchableSEntity);
         }catch (NoSuchElementException e){
             LogsUtility.LoggerInfo("No such element Exist");
         } catch (InterruptedException e) {

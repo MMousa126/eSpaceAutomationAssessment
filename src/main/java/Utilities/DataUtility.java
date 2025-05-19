@@ -14,6 +14,8 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.util.List;
 import java.util.Properties;
 
 // this class concerns with the Data like handling data from external files
@@ -316,6 +318,30 @@ public class DataUtility {
             e.printStackTrace();
         }
     }
+
+    public static int getAndIncrementCounter(String filename) {
+        File file = new File(TestData_Path + filename + ".json");
+        int counter = 0;
+
+        try {
+            if (file.exists()) {
+                List<String> lines = Files.readAllLines(file.toPath());
+                if (!lines.isEmpty()) {
+                    counter = Integer.parseInt(lines.get(0));
+                }
+            }
+
+            counter++;
+
+            Files.write(file.toPath(), String.valueOf(counter).getBytes());
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Error handling the counter file: " + e.getMessage());
+            // You can log the error or handle it in another way
+        }
+
+        return counter;
+    }
+
 
 
 //    public static String getProjectRoot() {
