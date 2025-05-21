@@ -3,21 +3,27 @@ package Mandatory;
 public interface CreatingTransaction {
 
 
-    public default void logIn(){
+    public static  void logIn(){
 
     }
-    public default void clickOnRegisterTransaction(){
+    public static void clickOnRegisterTransaction(){
 
     }
-    public default String baseSetUp() {
+    public static String baseSetUp(){
 
         return "";
     }
 
-    public default void doNotLinkingTransaction(){
+    public static void doNotLinkingTransaction() {
+        
+    }
+
+    public static void printBarcode(String fileBarcodeName){
+        
+    }
+
+    public static void archiveFile(){
 
     }
-    public default void printBarcode(String fileBarcodeName){
-
-    }
+    
 }

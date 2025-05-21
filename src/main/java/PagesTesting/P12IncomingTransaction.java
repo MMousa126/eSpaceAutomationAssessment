@@ -117,16 +117,39 @@ public class P12IncomingTransaction {
 
     public P24AttachFile clickOnYesAttachFile() {
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.textToBe(locForArchiveCompleted,"مكتمل"));
+        try {
+            Thread.sleep(Duration.ofSeconds(2));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         Utility.ScrollingUsingJS(driver,attachFileYes);
+
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until (ExpectedConditions.or(ExpectedConditions.textToBe(locForArchiveCompleted,"مكتمل")
+                ,(ExpectedConditions.textToBe(locForArchiveCompleted,"Completed")
+                        )))
+        ;
+
+
         Utility.Clicking_OnElement(driver, attachFileYes);
         return new P24AttachFile(driver);
     }
 
     public P12IncomingTransaction clickOnContinueRegistering(){
 
-        Utility.Clicking_OnElementVisibility(driver,continueRegister);
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until (ExpectedConditions.or(ExpectedConditions.textToBe(continueRegister,"استمرار في خطوات التسجيل")
+                        ,(ExpectedConditions.textToBe(continueRegister,"اكمل خطوات التسجيل")
+                        )))
+        ;
+        Utility.Clicking_OnElement(driver,continueRegister);
+        try {
+            Thread.sleep(Duration.ofSeconds(2));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         return this;
     }
 

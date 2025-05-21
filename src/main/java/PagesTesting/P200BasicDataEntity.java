@@ -6,9 +6,12 @@ import com.aventstack.extentreports.templating.FreemarkerTemplate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 public class P200BasicDataEntity {
     private final WebDriver driver;
@@ -42,6 +45,8 @@ public class P200BasicDataEntity {
         Utility.SendData(driver,searchEntity,entity);
 
         try{
+            new WebDriverWait(driver, Duration.ofSeconds(15))
+                    .until(ExpectedConditions.textToBe(searchableEntity,entity));
             Utility.Clicking_OnElement(driver,searchableEntity);
         }catch (NoSuchElementException e){
             LogsUtility.LoggerInfo("No such element Exist");
@@ -54,21 +59,19 @@ public class P200BasicDataEntity {
         Utility.ScrollingUsingJS(driver,secondaryEntity);
 
         Utility.Clicking_OnElement(driver,secondaryEntity);
-//        try {
-//            Thread.sleep(1500);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
         Utility.SendData(driver,searchSEntity,Sentity);
 
         try{
+            new WebDriverWait(driver, Duration.ofSeconds(15))
+                    .until(ExpectedConditions.textToBe(searchableSEntity,Sentity));
             Thread.sleep(2000);
-            Utility.Clicking_OnElementVisibility(driver,searchableSEntity);
-        }catch (NoSuchElementException e){
+            Utility.Clicking_OnElement(driver,searchableSEntity);
+        }catch (NoSuchElementException e) {
             LogsUtility.LoggerInfo("No such element Exist");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
         return this;
     }
 

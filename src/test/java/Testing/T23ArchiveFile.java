@@ -1,5 +1,6 @@
 package Testing;
 
+import Mandatory.Basic;
 import Mandatory.CreatingTransaction;
 import PagesTesting.P01Login;
 import PagesTesting.P02LandingPage;
@@ -28,63 +29,6 @@ public class T23ArchiveFile implements CreatingTransaction {
 
     SoftAssert softAssert = new SoftAssert();
 
-    public void logIn(){
-        new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
-                .clickOnLogin();
-    }
-    public void clickOnRegisterTransaction(){
-        new P02LandingPage(GetThreadDriver())
-                .clickOnIncomingInbox()
-                .selectDep1()
-                .openDDLRegisterIncomingTrans()
-                .clickOnRegIncomingTrans();
-    }
-
-    public String baseSetUp() {
-        String outgoingNo =
-                DataFaker.generateRandomListOfNumbers(1, 96, 8);
-
-
-        String transNo =  new P12IncomingTransaction(GetThreadDriver())
-                .clickOnBasicData()
-                .selectTransactionType("اصل")
-                .selectYesForRoyal("yes")
-                .selectConfidentialLevel("عام")
-                .selectImportantLevel(1)
-                .selectUrgentLevel("عادي")
-                .enterTransactionTopic("New Automated Test ")
-                .selectEntity()
-                .selectMainEntity("Mohamed Mousa Entity")
-                .selectSecondaryEntity("Mohamed Mousa Entity")
-                .enterNoOfAttachments(7)
-                .enterOutgoingNo(outgoingNo)
-                .selectEnterDate("Hijri")
-                .enterEntityTopic("Automated")
-                .clickOnSave()
-                .getTransactionCode("Arabic");
-
-        new P12IncomingTransaction(GetThreadDriver())
-                .clickOnContinueRegistering();
-
-        return transNo;
-    }
-
-    public void doNotLinkingTransaction(){
-
-        new P12IncomingTransaction(GetThreadDriver())
-                .clickOnNoLinkTrans();
-    }
-
-    public void printBarcode(String fileBarcodeName){
-        new P12IncomingTransaction(GetThreadDriver())
-                .clickOnPrintBarcode()
-                .printBarcodeData("8")
-                .finishStepPrint(fileBarcodeName)
-                .clickOnContinueRegistering();
-    }
-
     @BeforeMethod
     void setUp() {
         try {
@@ -103,17 +47,17 @@ public class T23ArchiveFile implements CreatingTransaction {
     void ArchiveFile() {
 
 
-        logIn();
+        Basic.logIn();
 
-        clickOnRegisterTransaction();
-        String noOfTheTransaction = baseSetUp();
+        Basic.clickOnRegisterTransaction();
+        String noOfTheTransaction = Basic.baseSetUp();
         String transKey = "TransactionNo" + DataUtility.getAndIncrementCounter("TransactionCounter");
 
         DataUtility.appendToJsonFileString("TransNumbers", transKey, noOfTheTransaction);
 
 
-        doNotLinkingTransaction();
-        printBarcode(DataFaker.fakerName());
+        Basic.doNotLinkingTransaction();
+        Basic.printBarcode(DataFaker.fakerName());
 
 
         String archiveFile = DataUtility.GetPropertiesDataFromFile(browser_filename,"FilesToBeArchived");
