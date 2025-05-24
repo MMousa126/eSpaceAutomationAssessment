@@ -47,10 +47,12 @@ public class T11ClickOnRegisterIncomingTransaction {
 
     @Test(priority = 1)
     void clickOnIncomingTransaction() {
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String url = new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()
@@ -64,10 +66,12 @@ public class T11ClickOnRegisterIncomingTransaction {
 
     @Test(priority = 2)
     void clickOnInternalIncomingTransaction() {
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String url = new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()

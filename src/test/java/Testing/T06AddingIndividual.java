@@ -63,12 +63,14 @@ public class T06AddingIndividual {
 
     @Test(priority = 1)
     void addingIndividual(){
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String indvNameKey = "IndividualName"+ DataFaker.generateRandomNumber(1,20);
         String inboxurl = DataUtility.GetPropertiesDataFromFile(browser_filename,"inboxURL") ;
         String url = new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnIndividual()

@@ -39,7 +39,7 @@ public class T24AttachFile {
     }
 
     @Test(priority = 1)
-    void ArchiveFile() {
+    void attachFile() {
 
 
 
@@ -69,8 +69,12 @@ public class T24AttachFile {
                 .enterFileName(randomName)
                 .enterAttachedFile("C:\\Users\\User\\Downloads\\Untitled video - Made with Clipchamp.mp4")
                 .clickOnAdd()
+                .clickOnAttachFile()
+                .enterFileName(randomName)
+                .enterAttachedFile("C:\\Users\\User\\Downloads\\Untitled video - Made with Clipchamp.mp4")
+                .clickOnAdd()
                 .clickOnSaveAttachFile()
-//                .clickOnContinueRegistering()
+                .clickOnContinueRegistering()
                 ;
     }
 

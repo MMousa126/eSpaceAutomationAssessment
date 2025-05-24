@@ -44,13 +44,15 @@ public class T04AddingInstitution {
 
     @Test(priority = 1)
     void addingInstitutionLevel1(){
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String entityName = "Automated Level 1" + " "+ DataFaker.fakerApp()
                 +DataFaker.generateRandomListOfNumbers(10,20,1);
         String entityCode = DataFaker.generateRandomListOfNumbers(0,10,5);
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnInstitution()
@@ -72,11 +74,14 @@ public class T04AddingInstitution {
 
     @Test(priority = 2)
     void addingInstitutionLevel2(){
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String entityNameLvl2 = "Automated Level 2" + " "+ DataFaker.fakerApp();
         String entityLvl1Name = DataUtility.GetJsonDataFromFile("EntityData","Entity_Name");
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnInstitution()
@@ -96,11 +101,14 @@ public class T04AddingInstitution {
     }
     @Test(priority = 3)
     void addingInstitutionLevel3(){
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String entityNameLvl3 = "Automated Level 3" + " "+ DataFaker.fakerApp();
         String entityLvl2Name = DataUtility.GetJsonDataFromFile("EntityData","Entity_NameLevel2");
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnInstitution()
@@ -120,13 +128,15 @@ public class T04AddingInstitution {
     }
     @Test(priority = 4)
     void addingInstitutionInboxRedirect(){
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String entityName = "Automated Level 1" + " "+ DataFaker.fakerApp();
         String entityCode = DataFaker.generateRandomListOfNumbers(0,10,5);
         String govNameKey = "GovernmentalName" + DataFaker.generateRandomNumber(1,30);
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnInstitution()

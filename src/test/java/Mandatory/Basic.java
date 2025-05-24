@@ -4,6 +4,7 @@ import PagesTesting.P01Login;
 import PagesTesting.P02LandingPage;
 import PagesTesting.P12IncomingTransaction;
 import Utilities.DataFaker;
+import Utilities.DataUtility;
 
 import static Factory.DriverFactory.GetThreadDriver;
 
@@ -11,9 +12,13 @@ public class Basic implements CreatingTransaction{
 
 
     public static void logIn(){
+
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin();
     }
 
@@ -31,18 +36,18 @@ public class Basic implements CreatingTransaction{
 
         String transNo =  new P12IncomingTransaction(GetThreadDriver())
                 .clickOnBasicData()
-                .selectTransactionType("صورة")
+                .selectTransactionType("اصل")
                 .selectYesForRoyal("No")
                 .selectConfidentialLevel("عام")
                 .selectImportantLevel(1)
                 .selectUrgentLevel("عادي")
-                .enterTransactionTopic("New Automated Test ")
+                .enterTransactionTopic("New Automated Test")
                 .selectEntity()
                 .selectMainEntity("Mohamed Mousa Entity")
                 .selectSecondaryEntity("Mohamed Mousa Entity")
                 .enterNoOfAttachments(7)
                 .enterOutgoingNo(outgoingNo)
-                .selectEnterDate("Hijri")
+                .selectEnterDate("ميلادي")
                 .enterEntityTopic("Automated")
                 .clickOnSave()
                 .getTransactionCode("Arabic");

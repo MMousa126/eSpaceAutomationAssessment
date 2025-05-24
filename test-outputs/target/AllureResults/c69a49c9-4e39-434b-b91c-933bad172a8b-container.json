@@ -1,0 +1,1 @@
+{"uuid":"c69a49c9-4e39-434b-b91c-933bad172a8b","name":"Testing.T24AttachFile.Quit","children":["39f2fe1a-8161-41c0-b4b6-07de74f81386"],"description":"","befores":[],"afters":[{"name":"Quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1748105736712,"stop":1748105736712}],"start":1748105736712,"stop":1748105736712}

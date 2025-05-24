@@ -58,12 +58,10 @@ public class P24AttachFile {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Button is still not clicked");
-        Utility.Clicking_OnElement(driver,addBtn);
 
-        System.out.println("Button is clicked");
+        Utility.Clicking_OnElement(driver,addBtn);
         try {
-            Thread.sleep(Duration.ofSeconds(3));
+            Thread.sleep(Duration.ofSeconds(2));
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -72,12 +70,13 @@ public class P24AttachFile {
 
     public P12IncomingTransaction clickOnSaveAttachFile() {
 
-//        new WebDriverWait(driver, Duration.ofSeconds(10))
-//                .until(driver -> driver.findElement(saveAttachFileBtn).isEnabled());
-
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(attachment));
+                .until(driver -> driver.findElement(saveAttachFileBtn).isEnabled());
 
+//        new WebDriverWait(driver, Duration.ofSeconds(10))
+//                .until(ExpectedConditions.presenceOfElementLocated(attachment));
+
+        Utility.ScrollingUsingJS(driver,saveAttachFileBtn);
         Utility.Clicking_OnElement(driver, saveAttachFileBtn);
         return new P12IncomingTransaction(driver);
     }

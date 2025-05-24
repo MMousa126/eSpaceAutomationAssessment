@@ -29,11 +29,14 @@ public class T21LinkingTransaction {
     SoftAssert softAssert = new SoftAssert();
 
     public String baseSetUp(){
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String outgoingNo =
                 DataFaker.generateRandomListOfNumbers(1,96,8);
         String noOfTheTransaction =   new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()

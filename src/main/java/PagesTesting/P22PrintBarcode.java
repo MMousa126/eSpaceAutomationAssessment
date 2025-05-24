@@ -40,10 +40,10 @@ public class P22PrintBarcode {
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
             robot.delay(3000);
-//            Utility.typeString(robot,barcodeName);
-//            robot.keyPress(KeyEvent.VK_ENTER);
-//            robot.keyRelease(KeyEvent.VK_ENTER);
-//            robot.delay(2000);
+            Utility.typeString(robot,barcodeName);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(2000);
         } catch (InterruptedException | AWTException e) {
             throw new RuntimeException(e);
         }

@@ -46,14 +46,16 @@ public class T05AddingCompany {
 
     @Test(priority = 1)
     void addingCompany(){
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String companyName = "Automated Level 1" + " "+ DataFaker.fakerApp()
                 +DataFaker.generateRandomListOfNumbers(10,20,1);
         String CompanyNameKey = "CompanyName" + DataFaker.generateRandomNumber(1,50);
         String comRegNo = DataFaker.generateRandomListOfNumbers(0,10,10);
         String url = new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .sysSettings()
                 .clickOnCompany()

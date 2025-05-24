@@ -29,11 +29,13 @@ public class T22PrintBarcode {
     public String baseSetUp(){
         String outgoingNo =
                 DataFaker.generateRandomListOfNumbers(1,96,8);
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
 
         return new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()

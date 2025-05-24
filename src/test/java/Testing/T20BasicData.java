@@ -45,11 +45,15 @@ public class T20BasicData {
     @Test(priority = 1)
     void BasicData() {
 
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
+
         String outgoingNo =
                 DataFaker.generateRandomListOfNumbers(1,96,8);
         new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()
@@ -74,13 +78,15 @@ public class T20BasicData {
     }
     @Test(priority = 2)
     void getTransactionCode() {
-
+        String filePath = DataUtility.GetPropertiesDataFromFile("environment","AuthFile_Location");
+        String userName = DataUtility.GetJsonDataFromFilePC(filePath,"Musername");
+        String password = DataUtility.GetJsonDataFromFilePC(filePath,"Mpassword");
         String transKey = "TransactionNo"+ DataFaker.generateRandomListOfNumbers(1,96,2);
         String outgoingNo =
                 DataFaker.generateRandomListOfNumbers(1,96,8);
         String transNo = new P01Login(GetThreadDriver())
-                .enterUsername("MohamedTest")
-                .enterPassword("Moh@Test2025")
+                .enterUsername(userName)
+                .enterPassword(password)
                 .clickOnLogin()
                 .clickOnIncomingInbox()
                 .selectDep1()
