@@ -3,6 +3,9 @@ package PagesTesting;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class P11IncomingInbox {
 
@@ -13,6 +16,10 @@ public class P11IncomingInbox {
     private final By regTrans = By.id("dropdownCreateTransaction");
     private final By incomingTrans = By.xpath("(//button[@class = 'dropdown-item'])[2]");
     private final By internalIncomingTrans = By.xpath("(//button[@class = 'dropdown-item'])[3]");
+    private final By searchBox = By.xpath("//div[@class='transactions-list']/header/div/input");
+    private final By searchBtn = By.xpath("(//div[@class='transactions-list']/header/div/button)[1]");
+    private final By stateDDL = By.id("dropdownTransactionStatus");
+    private final By sortingBtn = By.xpath("//div[@class='transactions-list']/header/button");
 
 
 
@@ -46,5 +53,18 @@ public class P11IncomingInbox {
         Utility.Clicking_OnElement(driver,internalIncomingTrans);
         return new P12IncomingTransaction(driver);
     }
+
+    public P11IncomingInbox enterSearchableDataIntoBox(String transNo){
+        Utility.SendData(driver,searchBox,transNo);
+        return this;
+    }
+
+    public P11IncomingInbox clickOnSearchBtn(){
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(driver -> driver.findElement(searchBtn).isEnabled());
+        Utility.Clicking_OnElement(driver,searchBtn);
+        return this;
+    }
+
 
 }

@@ -31,8 +31,8 @@ public class Basic implements CreatingTransaction{
 
         String transNo =  new P12IncomingTransaction(GetThreadDriver())
                 .clickOnBasicData()
-                .selectTransactionType("اصل")
-                .selectYesForRoyal("yes")
+                .selectTransactionType("صورة")
+                .selectYesForRoyal("No")
                 .selectConfidentialLevel("عام")
                 .selectImportantLevel(1)
                 .selectUrgentLevel("عادي")
