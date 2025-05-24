@@ -42,6 +42,23 @@ public class DataUtility {
         return "";
     }
 
+    public static String GetJsonDataFromFilePC(String filePath, String key) {
+
+        try {
+            FileReader reader = new FileReader(filePath);
+
+            JsonElement jsonElement = JsonParser.parseReader(reader);
+
+            return jsonElement.getAsJsonObject().get(key).getAsString();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "";
+    }
+
 
     /* Reading From Properties File */
     public static String GetPropertiesDataFromFile(String propertiesfilename, String key) {
