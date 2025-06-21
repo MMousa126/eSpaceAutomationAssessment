@@ -1,1 +1,0 @@
-{"uuid":"b46fb52e-f2a5-4bb3-ac6e-1818037e3ea2","name":"Testing.T22PrintBarcode.setUp","children":["87a60e29-c9ff-4420-8938-5fbd64c25704"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747592896306,"stop":1747592909079}],"afters":[],"start":1747592896306,"stop":1747592909079}

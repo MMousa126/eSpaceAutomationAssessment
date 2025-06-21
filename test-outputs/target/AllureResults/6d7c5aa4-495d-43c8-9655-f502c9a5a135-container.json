@@ -1,1 +1,0 @@
-{"uuid":"6d7c5aa4-495d-43c8-9655-f502c9a5a135","name":"Testing.T05AddingCompany.quit","children":["d5fd12ad-005e-424c-84ab-57674d213c38"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746973187250,"stop":1746973187498}],"start":1746973187250,"stop":1746973187498}

@@ -1,1 +1,0 @@
-{"uuid":"d76b38ac-eb27-4a76-aa01-ac5c05a01f75","name":"Testing.T24AttachFile.setUp","children":["614a2748-66d9-4beb-b618-f8af4ca254cf"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747834094897,"stop":1747834098991}],"afters":[],"start":1747834094897,"stop":1747834098991}

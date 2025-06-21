@@ -1,1 +1,0 @@
-{"uuid":"30c13b65-8367-453d-96cd-7553b753eb96","name":"Testing.T11ClickOnRegisterIncomingTransaction","children":["6f74470e-b5a4-4acc-beae-837915873996"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747056863475,"stop":1747056867816}],"afters":[],"start":1747056863436,"stop":1747056871006}
