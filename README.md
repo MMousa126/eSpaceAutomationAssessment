@@ -24,6 +24,9 @@ This project provides automated functional and negative testing for the [Magento
 - 📄 [Allure Report Screenshoots (Google Drive)](https://drive.google.com/drive/folders/1-ozF6VDno5fYFTZZi147zQZWi16VrPqg?usp=drive_link)
 - 📄 [SQL injection Evidence (Google Drive)](https://drive.google.com/file/d/11tVj14_gPeJvOobJztETXiQI29aP09Sy/view?usp=drive_link)
 
+## 🧰 Note
+- For XSS has been tried but it is returning the expected result  
+- 📄 [XSS injection (Google Drive)](https://drive.google.com/file/d/1A428aza0pXhCFJHbHnzCgn6P6FmptGf7/view?usp=drive_link)
 
 ## 🛠 Tools Used
 - IntelliJ IDEA Community Edition 2024.1.4
