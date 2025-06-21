@@ -18,7 +18,7 @@ This project provides automated functional and negative testing for the [Magento
 
 ## 📂 Documentation
 - 📄 [Test Plan (Google Drive)](https://docs.google.com/spreadsheets/d/1S5ZYhqTE65MUBkWzqfixohyWnVAhoQwA/edit?usp=drive_link&ouid=104520795720826046842&rtpof=true&sd=true)
-- 📄 [SQL injection & Bug Report (Google Drive)](https://docs.google.com/spreadsheets/d/1ZhganX1kBJwj_auhNI5q6mzcDIjoBlVy/edit?usp=drive_link&ouid=104520795720826046842&rtpof=true&sd=true)
+- 📄 [SQL injection & Bug Report (Google Drive)](https://docs.google.com/spreadsheets/d/1atv0v70PZzeIW6sST3S6EcbYtTrziXJK/edit?usp=drive_link&ouid=104520795720826046842&rtpof=true&sd=true)
 
 ## 📂 Evidence 
 - 📄 [Allure Report Screenshoots (Google Drive)](https://drive.google.com/drive/folders/1-ozF6VDno5fYFTZZi147zQZWi16VrPqg?usp=drive_link)
