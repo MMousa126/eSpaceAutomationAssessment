@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BaseScript" />
         <module name="SwagLabs" />
-        <module name="SOCPA_CRM" />
         <module name="sprintTask" />
         <module name="Nazaha2" />
       </profile>
