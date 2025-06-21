@@ -3,6 +3,10 @@
 ## 🧪 Overview
 This project provides automated functional and negative testing for the [Magento demo e-commerce site](https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html), built using Java, Selenium WebDriver, TestNG, Maven, and Allure Reports. The automation framework follows the Page Object Model (POM) design pattern.
 
+## 🧪 Task QA Sprints
+- 📄 [Sprints QA Task (Google Drive)](https://drive.google.com/file/d/1iW2JDaRqdUMcfiGf7ADmQuLXvnJxjZ5g/view?usp=drive_link)
+
+
 ## ✅ Features Covered
 - Product Search (Valid & Invalid)
 - Add to Cart (Valid & Missing Required Options)
