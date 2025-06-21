@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Searching For Item">
+    <test name="Verify that the user is able to search for item">
+        <classes>
+            <class name="Testing.PositiveTestCases.itemSearchTC"/>
+        </classes>
+    </test>
+</suite>

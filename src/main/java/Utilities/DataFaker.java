@@ -8,6 +8,15 @@ public class DataFaker {
 
     private static final Faker faker = new Faker();
 
+    public static String fakerCity(){
+        return faker.address().city();
+    }
+    public static String fakerDomain(){
+        return faker.internet().domainName();
+    }
+    public static String fakeEmail(){
+        return fakerFirstName()+"."+fakerLastName()+"@"+fakerDomain();
+    }
     public static String fakerUsername(){
         return faker.name().username();
     }
@@ -47,7 +56,12 @@ public class DataFaker {
         return faker.aviation().aircraft();
     }
 
-
+    public static String fakerFirstName(){
+        return faker.name().firstName();
+    }
+    public static String fakerLastName(){
+        return faker.name().lastName();
+    }
 
     public static String fakerBeer() {
         return faker.beer().name();

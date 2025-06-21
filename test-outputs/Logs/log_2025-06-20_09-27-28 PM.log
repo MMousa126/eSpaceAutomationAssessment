@@ -1,0 +1,8 @@
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jun 20 21:27:28 EEST 2025
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case Quit failed
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jun 20 21:27:28 EEST 2025
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp skipped
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingItemToCard has Started
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jun 20 21:27:28 EEST 2025
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingItemToCard skipped
+[INFO] 20-06-2025 21:27:28 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:106)] - Test Case addingItemToCard has been Skipped

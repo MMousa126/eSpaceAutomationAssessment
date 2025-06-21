@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="product Purchase">
+    <test name="Verify that the user is able to complete the purchase of the product">
+        <classes>
+            <class name="Testing.PositiveTestCases.purchaseItemTC"/>
+        </classes>
+    </test>
+</suite>

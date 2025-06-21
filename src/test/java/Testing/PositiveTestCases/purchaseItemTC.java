@@ -1,6 +1,5 @@
-package Testing;
+package Testing.PositiveTestCases;
 
-import Assertion.AssertUtility;
 import Factory.DriverFactory;
 import PagesTesting.itemPage;
 import PagesTesting.itemSearch;
@@ -16,6 +15,9 @@ import org.testng.asserts.SoftAssert;
 import Listeners.IInvokedMethodListeners;
 import Listeners.ITestResultListeners;
 @Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
+
+
+// Verify that the user is able to complete the purchase of the product (ID: #12553)
 public class purchaseItemTC {
     private final String browser = "Browser";
     private final String browser_filename = "environment";

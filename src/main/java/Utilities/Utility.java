@@ -42,6 +42,7 @@ public class Utility {
 
 
 
+
     public static void Clicking_OnElement(WebDriver driver, By locator) {
 
         new WebDriverWait(driver, Duration.ofSeconds(15))
@@ -52,7 +53,7 @@ public class Utility {
 
     public static void Clicking_OnElementVisibility(WebDriver driver, By locator) {
 
-        new WebDriverWait(driver, Duration.ofSeconds(120))
+        new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         driver.findElement(locator).click();
@@ -262,6 +263,8 @@ public class Utility {
 
     public static void ScrollingUsingJS(WebDriver driver, By locator) {
 
+        new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
         WebElement element = driver.findElement(locator);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
     }
@@ -330,6 +333,11 @@ public class Utility {
 
         new WebDriverWait(driver,Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfAllElements(ByToWebElement(driver,locator)));
+    }
+    public static void WaitUntilTheElementIsVisible(WebDriver driver, By locator){
+
+        new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
     public static void TakingScreenShotForSpecificElement(WebDriver driver, By locator, String ScreenShootName) {
 

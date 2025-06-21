@@ -13,8 +13,8 @@ import org.testng.asserts.SoftAssert;
 
 @Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
 
-//Verify that the user is able to add an item to the Card
-public class itemPageTC {
+//Verify that the user is able to add an item to the Card (ID: #12552)
+public class AddingItemToCard {
 
     private final String browser = "Browser";
     private final String browser_filename = "environment";

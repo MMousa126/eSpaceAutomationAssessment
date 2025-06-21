@@ -1,0 +1,7 @@
+[INFO] 21-06-2025 02:35:51 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sat Jun 21 02:35:50 EEST 2025
+[INFO] 21-06-2025 02:35:53 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 21-06-2025 02:35:58 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 21-06-2025 02:35:58 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 21-06-2025 02:35:58 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingItemToCardWhenQuentityZero has Started
+[INFO] 21-06-2025 02:35:58 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sat Jun 21 02:35:50 EEST 2025
+[INFO] 21-06-2025 02:36:07 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingItemToCardWhenQuentityZero passed

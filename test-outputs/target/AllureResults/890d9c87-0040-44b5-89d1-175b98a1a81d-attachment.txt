@@ -1,0 +1,10 @@
+[INFO] 21-06-2025 02:23:47 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sat Jun 21 02:23:46 EEST 2025
+[INFO] 21-06-2025 02:23:49 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 21-06-2025 02:23:52 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 21-06-2025 02:23:52 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 21-06-2025 02:23:52 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingItemToCardWithoutSelectSize has Started
+[INFO] 21-06-2025 02:23:52 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sat Jun 21 02:23:46 EEST 2025
+[INFO] 21-06-2025 02:24:01 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingItemToCardWithoutSelectSize passed
+[INFO] 21-06-2025 02:24:01 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case addingItemToCardWithoutSelectSize has Passed Successfully
+[INFO] 21-06-2025 02:24:01 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sat Jun 21 02:23:46 EEST 2025
+[INFO] 21-06-2025 02:24:01 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case Quit passed

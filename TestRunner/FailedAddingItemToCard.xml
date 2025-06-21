@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed to Add item to Card">
+    <test name="Verify that a user cannot add an item to the cart without selecting mandatory options">
+        <classes>
+            <class name="Testing.PositiveTestCases.AddingItemToCard"/>
+        </classes>
+    </test>
+</suite>

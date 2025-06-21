@@ -1,4 +1,4 @@
-package Testing;
+package Testing.PositiveTestCases;
 
 import Assertion.AssertUtility;
 import Factory.DriverFactory;
@@ -7,9 +7,6 @@ import Utilities.DataUtility;
 import Utilities.LogsUtility;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
-
-import static Factory.DriverFactory.GetThreadDriver;
-import static Factory.DriverFactory.SetupThreadDriver;
 
 import Listeners.IInvokedMethodListeners;
 import Listeners.ITestResultListeners;

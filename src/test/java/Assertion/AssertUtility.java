@@ -12,22 +12,20 @@ public class AssertUtility {
     }
 
 
-    public AssertUtility assertTrue(boolean condition){
+    public static void assertTrue(SoftAssert softAssert, boolean condition){
 
         softAssert.assertTrue(condition);
-        return this ;
     }
 
-    public AssertUtility assertFalse(boolean condition){
+    public static void assertFalse(SoftAssert softAssert,boolean condition){
 
         softAssert.assertFalse(condition);
-        return this ;
     }
 
-    public AssertUtility assertEqual(String actual, String expected){
+    public static void assertEqual(SoftAssert softAssert,String actual, String expected){
 
         softAssert.assertEquals(actual,expected);
-        return this ;
+
     }
 
 
