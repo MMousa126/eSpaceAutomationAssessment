@@ -32,6 +32,7 @@ This project provides automated functional and negative testing for the [Magento
 - IntelliJ IDEA Community Edition 2024.1.4
 - Microsoft Excel (for writing manual test cases)
 
+
 ## ⚙️ Setup Instructions
 1. Clone this repository.
 2. Open the project in your preferred IDE (e.g., IntelliJ IDEA).
