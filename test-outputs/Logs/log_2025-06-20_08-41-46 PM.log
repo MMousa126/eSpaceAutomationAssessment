@@ -1,7 +1,0 @@
-[INFO] 20-06-2025 20:41:46 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jun 20 20:41:45 EEST 2025
-[INFO] 20-06-2025 20:41:48 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
-[INFO] 20-06-2025 20:41:51 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
-[INFO] 20-06-2025 20:41:51 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
-[INFO] 20-06-2025 20:41:51 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case addingItemToCardDiffAssertion has Started
-[INFO] 20-06-2025 20:41:51 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jun 20 20:41:45 EEST 2025
-[INFO] 20-06-2025 20:42:00 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case addingItemToCardDiffAssertion failed

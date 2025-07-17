@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Search for non-existing Item">
-    <test name="Verify that the system shows n appropriate message when searching with an invalid/non-existent product name">
-        <classes>
-            <class name="Testing.NegativeTestCase.invalidProductSearch"/>
-        </classes>
-    </test>
-</suite>

@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Adding item to Card">
-    <test name="Verify that the user is able to add an item to the Card">
-        <classes>
-            <class name="Testing.PositiveTestCases.AddingItemToCard"/>
-        </classes>
-    </test>
-</suite>

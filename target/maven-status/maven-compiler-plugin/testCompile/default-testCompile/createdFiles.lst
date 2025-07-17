@@ -1,7 +1,0 @@
-Testing\PositiveTestCases\AddingItemToCard.class
-Testing\PositiveTestCases\itemSearchTC.class
-Testing\NegativeTestCase\invalidProductSearch.class
-Testing\PositiveTestCases\purchaseItemTC.class
-Listeners\IInvokedMethodListeners.class
-Listeners\ITestResultListeners.class
-Assertion\AssertUtility.class
