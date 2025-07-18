@@ -92,8 +92,6 @@ As a result, any attempts to complete the bonus scenario with real API calls wil
 
 ## 🚀 How to Run the Tests
 
-## 🚀 How to Run the Tests
-
 ### 1. UI Test Execution
 - Open your IDE (e.g., IntelliJ or Eclipse).
 - Navigate to the test runner directory where `UserManagmentM1.xml` and `UserManagmentM2.xml` files are located.
