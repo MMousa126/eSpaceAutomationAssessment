@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Running Bones Point">
+    <test name="add Candidate API">
+        <classes>
+            <class name="Testing.T04AddCandidateAPITest"/>
+        </classes>
+    </test>
+</suite>

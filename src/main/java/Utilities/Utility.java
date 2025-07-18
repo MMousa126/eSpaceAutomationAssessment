@@ -6,6 +6,7 @@ import io.qameta.allure.Allure;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Point;
 
@@ -285,6 +286,11 @@ public class Utility {
     /* For Creating Time Stamp for name of screenshots or email vonrability */
     /* Return the time when the test case run */
     public static String GetTimeStamp() {
+
+        return new SimpleDateFormat("yyyy-MM-dd-hh-mm-ssa").format(new Date());
+    }
+
+    public static String TodaysDate() {
 
         return new SimpleDateFormat("yyyy-MM-dd-hh-mm-ssa").format(new Date());
     }
@@ -698,6 +704,10 @@ public class Utility {
                 .asString();
     }
 
+    public static String extractStatusCode(String jsonResponse) {
+        JSONObject obj = new JSONObject(jsonResponse);
+        return String.valueOf(obj.getJSONObject("error").getInt("status"));
+    }
 
 //    public static void takeFullPageScreenshot(WebDriver driver, String ScreenShootName) {
 //        try {
