@@ -1,0 +1,10 @@
+Utilities\VisualUtility.class
+Pages\P02HomePage.class
+Utilities\Utility.class
+Factory\DriverFactoryCucumber.class
+Pages\P01Login.class
+Utilities\DataUtility.class
+Factory\DriverFactory.class
+Utilities\LogsUtility.class
+Pages\P03UserManagment.class
+Utilities\DataFaker.class

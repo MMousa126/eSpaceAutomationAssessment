@@ -1,0 +1,1 @@
+{"uuid":"3631276e-4b0a-4efc-af0c-cccfc1db8deb","name":"Testing.T04AddCandidateAPITest","children":["eb16a81d-0d58-42f8-8cde-78c6a3af2361"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1752873801659,"stop":1752873807023}],"afters":[],"start":1752873801623,"stop":1752873809701}
