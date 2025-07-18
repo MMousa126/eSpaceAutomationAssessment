@@ -51,6 +51,10 @@ This project follows the **Page Object Model (POM)** with clean separation of:
 - Test input data (e.g., candidate details, login credentials) is loaded from:  
   `src/test/resources/TestData/TestData.json`
 
+🔐 **Authentication Note**:  
+For testing purposes, the username and password are included in `TestData.json`.  
+In a real-world project, credentials should be securely fetched (e.g., from environment variables or an external vault) instead of being stored in plain files.
+
 
 ## ✅ Implemented Scenarios
 
@@ -111,6 +115,11 @@ As a result, any attempts to complete the bonus scenario with real API calls wil
 - Review the test execution results in the console or in your test reports (e.g., TestNG HTML reports).
 - All assertions for UI and API logic will be visible with detailed pass/fail status.
 
+📊 **Allure Report (Optional)**
+To view an interactive HTML report after test execution: 
+
+**In The Terminal**
+`allure serve test-outputs/target/AllureResults`
 
 
 ### 🖥 Prerequisites
