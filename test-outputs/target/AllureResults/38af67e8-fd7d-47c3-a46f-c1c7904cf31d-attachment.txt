@@ -1,0 +1,4 @@
+[INFO] 18-07-2025 22:30:09 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Fri Jul 18 22:30:08 EEST 2025
+[INFO] 18-07-2025 22:30:11 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 18-07-2025 22:30:14 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 18-07-2025 22:30:19 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed

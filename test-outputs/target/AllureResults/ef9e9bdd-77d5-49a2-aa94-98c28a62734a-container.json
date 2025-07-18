@@ -1,0 +1,1 @@
+{"uuid":"ef9e9bdd-77d5-49a2-aa94-98c28a62734a","name":"Testing.T03UserManagment.setUp","children":["0cd5eff7-ea32-40c6-8426-53f5bdc366a1"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1752864848399,"stop":1752864853955}],"afters":[],"start":1752864848399,"stop":1752864853956}

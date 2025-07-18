@@ -1,0 +1,7 @@
+{
+  "UserName" : "Admin",
+  "Password": "admin123",
+  "AlertMSG": "Error\nCannot be deleted\n×",
+  "NoOfResult" : "1",
+  "Status": "Enabled"
+}
