@@ -45,10 +45,6 @@ public class DriverFactory {
                 driverThreadLocal.set(new EdgeDriver(edgeoptions));
                 break;
             default:
-//                FirefoxOptions firefoxOptions = new FirefoxOptions();
-//                firefoxOptions.addArguments("--width=1680");
-//                firefoxOptions.addArguments("--height=900");
-//                driverThreadLocal.set(new FirefoxDriver(firefoxOptions));
                 driverThreadLocal.set(new FirefoxDriver());
                 driverThreadLocal.get().manage().window().maximize();
 

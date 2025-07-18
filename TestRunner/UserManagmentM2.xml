@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Running Scenario">
+    <test name="Method 2">
+        <classes>
+            <class name="Testing.T032UserManagmentMethod2"/>
+        </classes>
+    </test>
+</suite>

@@ -35,6 +35,9 @@ import java.time.LocalDate;
 import java.time.chrono.HijrahDate;
 import java.util.*;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 // this class concerns with any additional function that can helps me (General)
 public class Utility {
 
@@ -254,12 +257,10 @@ public class Utility {
         return driver.findElement(locator);
     }
 
-    public static ArrayList<WebElement> FindingElementsArrayList(WebDriver driver, By locator) {
+    public static List<WebElement> FindingElementsArrayList(WebDriver driver, By locator) {
 
-        return (ArrayList<WebElement>) driver.findElements(locator);
+        return driver.findElements(locator);
     }
-
-
 
     public static void ScrollingUsingJS(WebDriver driver, By locator) {
 
@@ -268,6 +269,18 @@ public class Utility {
         WebElement element = driver.findElement(locator);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
     }
+
+    public static String extractNumberAsString(String text) {
+        Pattern pattern = Pattern.compile("\\((\\d+)\\)");
+        Matcher matcher = pattern.matcher(text);
+
+        if (matcher.find()) {
+            return matcher.group(1); // Return the number inside parentheses as a string
+        } else {
+            throw new IllegalArgumentException("No number found in the given text.");
+        }
+    }
+
 
     /* For Creating Time Stamp for name of screenshots or email vonrability */
     /* Return the time when the test case run */
