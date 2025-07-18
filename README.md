@@ -115,8 +115,12 @@ As a result, any attempts to complete the bonus scenario with real API calls wil
 - Review the test execution results in the console or in your test reports (e.g., TestNG HTML reports).
 - All assertions for UI and API logic will be visible with detailed pass/fail status.
 
-📊 **Allure Report (Optional)**
+
+
+## 📊 Allure Report (Optional)
 To view an interactive HTML report after test execution: 
+
+
 
 **In The Terminal**
 `allure serve test-outputs/target/AllureResults`
