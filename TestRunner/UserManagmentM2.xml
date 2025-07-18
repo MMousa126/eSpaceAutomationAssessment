@@ -2,7 +2,7 @@
 <suite name="Running Scenario">
     <test name="Method 2">
         <classes>
-            <class name="Testing.T032UserManagmentMethod2"/>
+            <class name="Testing.T03UserManagmentMethod2"/>
         </classes>
     </test>
 </suite>

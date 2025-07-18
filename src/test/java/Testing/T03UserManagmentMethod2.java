@@ -14,7 +14,7 @@ import Listeners.IInvokedMethodListeners;
 import Listeners.ITestResultListeners;
 @Listeners({IInvokedMethodListeners.class, ITestResultListeners.class})
 
-public class T032UserManagmentMethod2 {
+public class T03UserManagmentMethod2 {
 
     private final String browser = "Browser";
     private final String browser_filename = "environment";
