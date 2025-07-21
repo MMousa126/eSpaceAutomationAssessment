@@ -3,8 +3,7 @@ package Pages;
 import Utilities.Utility;
 import org.openqa.selenium.*;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class P03UserManagment {
     private final WebDriver driver;
@@ -55,10 +54,16 @@ public class P03UserManagment {
     }
 
     public String getUserRole(){
+
+        driver.manage().window().setSize(new Dimension(1366, 768)); // desktop size
+
         return Utility.GetText(driver,userRoleLoc);
     }
 
     public String getStatus(){
+
+        driver.manage().window().setSize(new Dimension(1366, 768)); // desktop size
+
         return Utility.GetText(driver,statusLoc);
     }
 
