@@ -10,6 +10,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.List;
 import java.util.Set;
 
 import static Factory.DriverFactory.GetThreadDriver;
@@ -48,7 +50,6 @@ public class T04AddCandidateAPITest {
     private final SoftAssert softAssert = new SoftAssert();
     Set<Cookie> cookies;
 
-
     @BeforeClass
     void login(){
         DriverFactory.SetupThreadDriver(Browser);
@@ -56,10 +57,9 @@ public class T04AddCandidateAPITest {
         DriverFactory.GetThreadDriver().get(portal);
         LogsUtility.LoggerInfo("Page is Redirected to the URL");
 
-        new P01Login(GetThreadDriver())
-                .enterAuthCrediential(userNameData, passwordData)
-                .clickOnLogin();
-
+            new P01Login(GetThreadDriver())
+                    .enterAuthCrediential(userNameData, passwordData)
+                    .clickOnLogin();
 
         cookies = Utility.GetAllCookies(GetThreadDriver());
         DriverFactory.QuitThreadDriver();

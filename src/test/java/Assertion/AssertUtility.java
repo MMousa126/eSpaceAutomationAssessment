@@ -7,11 +7,6 @@ public class AssertUtility {
     private static SoftAssert softAssert;
 
 
-    public AssertUtility(SoftAssert softAssert) {
-        this.softAssert = softAssert;
-    }
-
-
     public static void assertTrue(SoftAssert softAssert, boolean condition){
 
         softAssert.assertTrue(condition);
@@ -29,7 +24,7 @@ public class AssertUtility {
     }
 
 
-    public void assertAll(){
+    public static void assertAll(){
 
         softAssert.assertAll();
     }

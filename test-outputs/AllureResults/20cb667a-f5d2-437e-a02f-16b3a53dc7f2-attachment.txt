@@ -1,0 +1,19 @@
+[INFO] 03-08-2025 01:53:17 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 01:53:16 EEST 2025
+[INFO] 03-08-2025 01:53:20 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 03-08-2025 01:53:23 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 03-08-2025 01:53:27 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 03-08-2025 01:53:27 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case clickOnAdminUsersM2 has Started
+[INFO] 03-08-2025 01:53:27 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 01:53:16 EEST 2025
+[INFO] 03-08-2025 01:53:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case clickOnAdminUsersM2 passed
+[INFO] 03-08-2025 01:53:28 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case clickOnAdminUsersM2 has Passed Successfully
+[INFO] 03-08-2025 01:53:28 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case getUserNameM2 has Started
+[INFO] 03-08-2025 01:53:28 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 01:53:16 EEST 2025
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getUserNameM2 passed
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case getUserNameM2 has Passed Successfully
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case getUserRoleM2 has Started
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 01:53:16 EEST 2025
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getUserRoleM2 passed
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)] - Test Case getUserRoleM2 has Passed Successfully
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:122)] - Test Case getStatusM2 has Started
+[INFO] 03-08-2025 01:53:29 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 01:53:16 EEST 2025
+[INFO] 03-08-2025 01:53:30 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getStatusM2 passed

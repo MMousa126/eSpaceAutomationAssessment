@@ -1,0 +1,10 @@
+[INFO] 03-08-2025 20:34:16 [TestNG-test-Method 2-1] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:34:14 EEST 2025
+[INFO] 03-08-2025 20:34:21 [TestNG-test-Method 2-1] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 03-08-2025 20:34:52 [TestNG-test-Method 2-1] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[ERROR] 03-08-2025 20:35:23 [TestNG-test-Method 2-1] [Testing.T03UserManagmentMethod2.setUp(T03UserManagmentMethod2.java:61)] - Invalid URL
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-1] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-1] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case clickOnAdminUsersM2 has Started
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-2] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case getUserNameM2 has Started
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-1] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:34:14 EEST 2025
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-2] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:34:14 EEST 2025
+[INFO] 03-08-2025 20:35:23 [TestNG-test-Method 2-2] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getUserNameM2 failed

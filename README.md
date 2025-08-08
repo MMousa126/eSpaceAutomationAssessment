@@ -111,6 +111,7 @@ As a result, any attempts to complete the bonus scenario with real API calls wil
 - This simulates an API call using REST Assured and validates the HTTP response.
   > ⚠️ Note: Since the public OrangeHRM demo site does not expose a working API, this test uses a mock structure to demonstrate the intended REST call and assertion logic.
 
+
 ### ✅ Test Output
 - Review the test execution results in the console or in your test reports (e.g., TestNG HTML reports).
 - All assertions for UI and API logic will be visible with detailed pass/fail status.
@@ -134,7 +135,14 @@ To view an interactive HTML report after test execution:
 
 ---
 
-### 📂 Clone the Repo
+
+### **Run from Terminal (Maven Profiles)**
+You can execute specific scenarios directly from the terminal using Maven profiles:
 
 ```bash
-git clone https://github.com/MMousa126/eSpaceAutomationAssessment.git
+# Run User Management scenario
+mvn -PUserManagmentProfile clean test
+
+# Run Add Candidate API scenario
+mvn -PAddCandidateAPIProfile clean test
+

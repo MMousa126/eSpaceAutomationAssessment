@@ -7,8 +7,6 @@ import java.util.Set;
 
 public class P04AddCandidateApI {
 
-
-
     public String addCandidate(String requestURL,String configReqType,String jsonBody){
         return Utility.InjectRequestUsingPostAPI
                 (requestURL,configReqType,jsonBody);

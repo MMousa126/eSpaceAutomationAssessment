@@ -1,0 +1,7 @@
+[INFO] 03-08-2025 02:12:36 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 02:12:35 EEST 2025
+[INFO] 03-08-2025 02:12:40 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 03-08-2025 02:12:42 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[INFO] 03-08-2025 02:12:47 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 03-08-2025 02:12:47 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case clickOnAdminUsersM2 has Started
+[INFO] 03-08-2025 02:12:47 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 02:12:35 EEST 2025
+[INFO] 03-08-2025 02:12:47 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case clickOnAdminUsersM2 passed

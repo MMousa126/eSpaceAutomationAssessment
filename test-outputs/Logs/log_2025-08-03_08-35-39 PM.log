@@ -1,0 +1,22 @@
+[INFO] 03-08-2025 20:35:39 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:35:42 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - chrome is Opened Correctly
+[INFO] 03-08-2025 20:36:23 [main] [java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)] - Page is Redirected to the URL
+[ERROR] 03-08-2025 20:36:33 [main] [Testing.T03UserManagmentMethod2.setUp(T03UserManagmentMethod2.java:61)] - Invalid URL
+[INFO] 03-08-2025 20:36:33 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case setUp passed
+[INFO] 03-08-2025 20:36:33 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case clickOnAdminUsersM2 has Started
+[INFO] 03-08-2025 20:36:33 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:44 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case clickOnAdminUsersM2 failed
+[INFO] 03-08-2025 20:36:44 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case getUserNameM2 has Started
+[INFO] 03-08-2025 20:36:44 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:55 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getUserNameM2 failed
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case getUserRoleM2 has Started
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getUserRoleM2 failed
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case getStatusM2 has Started
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case getStatusM2 failed
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)] - Test Case deleteAdminM2 has Started
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:56 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case deleteAdminM2 failed
+[INFO] 03-08-2025 20:36:57 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:56)] - Test Case Sun Aug 03 20:35:38 EEST 2025
+[INFO] 03-08-2025 20:36:57 [main] [org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)] - Test Case quitBrowser passed

@@ -92,7 +92,8 @@ public class T03UserManagment {
                 .getUsername();
 
         AssertUtility.assertEqual(softAssert,actualUserName,userNameData);
-
+        softAssert.assertAll();
+ 
     }
 
     // TODO: 4. Search using the username for the admin user
@@ -111,6 +112,7 @@ public class T03UserManagment {
                 .getUserRole();
 
         AssertUtility.assertEqual(softAssert,actualUserRole,userNameData);
+        softAssert.assertAll();
 
     }
     // TODO: 4. Search using the username for the admin user
@@ -130,6 +132,7 @@ public class T03UserManagment {
                 .getStatus();
 
         AssertUtility.assertEqual(softAssert,actualStatus,getStatusValue);
+        softAssert.assertAll();
 
     }
 
@@ -151,6 +154,7 @@ public class T03UserManagment {
 
 
         AssertUtility.assertEqual(softAssert,alart,toastMessage);
+        softAssert.assertAll();
     }
 
     @AfterMethod

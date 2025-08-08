@@ -1,0 +1,9 @@
+Testing\T01Login.class
+Testing\T04AddCandidateAPITest.class
+Testing\T03UserManagmentMethod2.class
+Listeners\IInvokedMethodListeners.class
+Testing\T02Sidemenu.class
+Testing\T03UserManagment.class
+Listeners\ITestResultListeners.class
+Assertion\AssertUtility.class
+Testing\T04SuccessfulAddCandiditeUsingRestAssured.class

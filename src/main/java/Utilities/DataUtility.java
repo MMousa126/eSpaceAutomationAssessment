@@ -1,6 +1,7 @@
 package Utilities;
 
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -15,6 +16,7 @@ import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.util.List;
 import java.util.Properties;
 
@@ -22,7 +24,6 @@ import java.util.Properties;
 public class DataUtility {
 
     public static final String TestData_Path = "src/test/resources/TestData/";
-
 
     /* Reading From Json File */
     public static String GetJsonDataFromFile(String jsonfilename, String field) {
@@ -33,19 +34,16 @@ public class DataUtility {
             JsonElement jsonElement = JsonParser.parseReader(reader);
 
             return jsonElement.getAsJsonObject().get(field).getAsString();
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         return "";
     }
-
     public static String GetJsonDataFromFilePC(String filePath, String key) {
 
         try {
-            FileReader reader = new FileReader(filePath);
+            FileReader reader = new FileReader(filePath); //Characters (text)
 
             JsonElement jsonElement = JsonParser.parseReader(reader);
 
@@ -55,7 +53,6 @@ public class DataUtility {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return "";
     }
 
@@ -64,9 +61,8 @@ public class DataUtility {
     public static String GetPropertiesDataFromFile(String propertiesfilename, String key) {
 
         try {
-
             Properties properties = new Properties();
-            properties.load(new FileInputStream(TestData_Path + propertiesfilename + ".properties"));
+            properties.load(new FileInputStream(TestData_Path + propertiesfilename + ".properties")); //Raw bytes
             return properties.getProperty(key);
 
         } catch (IOException e) {
@@ -96,7 +92,6 @@ public class DataUtility {
 
         String fileName = (TestData_Path + filename + ".xlsx");
         FileInputStream file = null;
-        File srcfile = new File(fileName);
         try {
             file = new FileInputStream(fileName);
         } catch (FileNotFoundException e) {
@@ -182,7 +177,9 @@ public class DataUtility {
         Workbook workbook = new XSSFWorkbook();
 
         // Create a sheet with the specified name
-        Sheet sheet = workbook.createSheet(sheetName);
+        Sheet sheet = workbook.getSheet(sheetName);
+        if (sheet == null)
+            sheet = workbook.createSheet(sheetName);
 
         // Create the header row
         Row headerRow = sheet.createRow(0);
@@ -359,7 +356,32 @@ public class DataUtility {
         return counter;
     }
 
+    public static void writeJsonStringToFile(String jsonString, String filePath) {
+        File file = new File(filePath);
 
+        try {
+            // Create parent directories if they don't exist
+            File parentDir = file.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs();
+            }
+
+            // Create the file if it doesn't exist
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            // Write the JSON string to the file
+            FileWriter writer = new FileWriter(file);
+            writer.write(jsonString);
+            writer.flush();
+            writer.close();
+
+            System.out.println("JSON written to: " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Error writing JSON string to file: " + e.getMessage());
+        }
+    }
 
 //    public static String getProjectRoot() {
 //        return Paths.get(".").toAbsolutePath().normalize().toString();

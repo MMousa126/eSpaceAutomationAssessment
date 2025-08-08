@@ -690,7 +690,8 @@ public class Utility {
     }
 
     /* Like injecting Registration for the preconditions */
-    public static String InjectRequestUsingPostAPI(String postrequest_url, String contantrequesttype, String bodytobeposted) {
+    public static String
+    InjectRequestUsingPostAPI(String postrequest_url, String contantrequesttype, String bodytobeposted) {
 
         return RestAssured
                 .given()

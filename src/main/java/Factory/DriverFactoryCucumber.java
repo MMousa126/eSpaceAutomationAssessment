@@ -10,6 +10,11 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 /* This for parallel execution and thread local */
 public class DriverFactoryCucumber extends AbstractTestNGCucumberTests {
@@ -17,6 +22,7 @@ public class DriverFactoryCucumber extends AbstractTestNGCucumberTests {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     public static void SetupThreadDriver(String browser) {
+
 
         String actualBrowser = browser.toLowerCase();
 

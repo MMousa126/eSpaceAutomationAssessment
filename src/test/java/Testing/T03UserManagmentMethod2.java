@@ -47,7 +47,6 @@ public class T03UserManagmentMethod2 {
             DriverFactory.GetThreadDriver().get(portal);
             LogsUtility.LoggerInfo("Page is Redirected to the URL");
 
-
             new P01Login(GetThreadDriver())
                     .enterAuthCrediential(userNameData, passwordData)
                     .clickOnLogin()
