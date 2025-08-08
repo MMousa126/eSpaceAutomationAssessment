@@ -40,7 +40,8 @@ This project follows the **Page Object Model (POM)** with clean separation of:
 │       │   │   ├── T02sidemenu       # This is for searching for admin to get to user managment
 │       │   │   ├── T03UserManagment  # This is for accessing the User managment for runing the Scenario in multiple sessions
 │       │   │   ├── T03UserManagment  # This is for running the same scenario and asserting in one session
-│       │   │   └── T04AddingCandidateApITest  # This is for Running the bones Point
+│       │   │   ├── T04AddingCandidateApITest  # This is for Running the bones Point
+│       │   │   └── T04SuccessfulAddCandiditeUsingRestAssured  # This is for Running the bones Point with status code 200
 │       │   └── Listeners             # TestNG custom listeners
 ```
 
